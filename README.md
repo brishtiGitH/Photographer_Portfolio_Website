@@ -1,4 +1,4 @@
-###This is a Modern Photography Portfolio Website made using HTML, Tailwind CSS, JavaScript and CSS
+### This is a Modern Photography Portfolio Website made using HTML, Tailwind CSS, JavaScript and CSS
 
 Landing Page 
 
@@ -7,7 +7,9 @@ Landing Page
 Main Body
 
 ![Main Body](Preview/prev1.png)
+
 ![Main Body](Preview/prev3.png)
+
 ![Main Body](Preview/prev4.png)
 
 Footer
