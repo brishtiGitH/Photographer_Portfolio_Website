@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --primary-font: "Noto Serif", sans-serif;
+  --secondary-font: "Lato", sans-serif;
+  --text-color: aliceblue;
+  --secondary-text-color: rgb(68, 64, 60);
+  --btn-color: rgb(87, 83, 78);
+  --background: #f6f6f2;
+  --accent-background: rgba(98, 94, 88, 0.664);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--background);
+}
+::selection {
+  background-color: rgb(68, 64, 60);
+  color: var(--text-color);
+}
+header {
+  background-image: url(https://images.unsplash.com/photo-1668182721544-c14077017d16?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.navbar ul li {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+}
+.heroTitle {
+  font-family: var(--primary-font);
+}
+.btn {
+  background-color: var(--btn-color);
+  color: var(--text-color);
+  padding: 0.75rem 4rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.btn:hover {
+  background-color: rgb(68, 64, 60);
+}
+
+.intro-left img,
+.about-left img {
+  width: 80%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15),
+    -2px -2px 10px rgba(0, 0, 0, 0.15);
+}
+.intro-left h4 {
+  font-family: var(--primary-font);
+}
+
+.banner {
+  background-image: url(https://images-pw.pixieset.com/sample_photos/theme_8_d61f7533_XL.jpg);
+  background-size: cover;
+  background-position: right;
+  color: var(--text-color);
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.banner:hover .overlay {
+  opacity: 1;
+}
+p {
+  line-height: 1.75rem;
+  font-size: 17px;
+  font-family: var(--secondary-font);
+}
+
+.portfolio .photos {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+#photo1,
+#photo2,
+#photo3 {
+  height: 100%;
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.15);
+  transition: all 0.5s;
+}
+
+#photo1 {
+  background-image: url(https://images.unsplash.com/photo-1633348300464-61b7c19b7fe0?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#photo2 {
+  background-image: url(https://images.unsplash.com/photo-1625264201387-ce27873f18dd?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#photo3 {
+  background-image: url(https://images.unsplash.com/photo-1712847333371-9ab4b8cebccf?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#photo1:hover,
+#photo2:hover,
+#photo3:hover {
+  transform: translateY(-15px);
+  cursor: pointer;
+}
+
+.description p {
+  text-align-last: center;
+}
+.about-left img {
+  position: relative;
+  z-index: 3;
+}
+.about-left .accent {
+  position: absolute;
+  z-index: 2;
+  height: 90%;
+  width: 70%;
+  top: -5px;
+  right: 98px;
+  background-color: var(--accent-background);
+}
+.testimonials h4 {
+  font-family: var(--primary-font);
+}
+.testimony-img {
+  background-position: center;
+  background-size: cover;
+}
+#banner-container {
+  background-image: url(https://images.unsplash.com/photo-1517840933437-c41356892b35?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center center;
+  background-size: cover;
+
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+#banner-container h1 {
+  font-family: var(--primary-font);
+  position: relative;
+  z-index: 5;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+#banner-container::before {
+  position: absolute;
+  content: "-------------------------------";
+  color: var(--text-color);
+  top: 10px;
+  left: 20px;
+  z-index: 4;
+}
+#banner-container::after {
+  position: absolute;
+  content: "-------------------------------";
+  color: var(--text-color);
+  bottom: 10px;
+  right: 20px;
+  z-index: 4;
+}
+.second-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+#btn-footer {
+  position: relative;
+  z-index: 6;
+}
+i {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 5px;
+}
